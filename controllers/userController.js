@@ -1,16 +1,17 @@
-const join = (req, res) => res.send("Join");
-const login = (req, res) => res.send("Login");
-const logout = (req, res) => res.send("Logout");
-const users = (req, res) => res.send("Users");
-const userDetail = (req, res) => res.render("userDetail");
-const editProfile = (req, res) => res.send("editProfile");
-const changePassword = (req, res) => res.send("changePassword");
+const join = (req, res) => res.render("Join", { pageTitle: "Join Us" });
+const login = (req, res) => res.render("Login", { pageTitle: "Log in" });
+const logout = (req, res) => res.render("Logout", { pageTitle: "Log out" });
+const userDetail = (req, res) =>
+  res.render("userDetail", { pageTitle: "User Page" });
+const editProfile = (req, res) =>
+  res.render("editProfile", { pageTitle: "edit profile" });
+const changePassword = (req, res) =>
+  res.render("changePassword", { pageTitle: "change password" });
 
 module.exports = {
   join: join,
   login: login,
   logout: logout,
-  users: users,
   userDetail: userDetail,
   editProfile: editProfile,
   changePassword: changePassword

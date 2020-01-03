@@ -1,15 +1,26 @@
-const videoHome = (req, res) => res.render("home");
-const searchVideo = (req, res) => res.send("Search");
-const videos = (req, res) => res.send("videos");
-const uploadVideo = (req, res) => res.send("upload");
-const videoDetail = (req, res) => res.send("videoDetail");
-const editVideo = (req, res) => res.send("editVideo");
-const deleteVideo = (req, res) => res.send("deleteVideo");
+import {videos} from "../db";
+
+const videoHome = (req, res) => {
+  res.render("home", { pageTitle: "Home", videos })
+};
+const searchVideo = (req, res) => {
+  const {
+    query: { term: searchingBy }
+  } = req;
+  console.log(searchingBy);
+  res.render("search", { pageTitle: "Search", searchingBy });
+};
+const uploadVideo = (req, res) => res.render("upload", { pageTitle: "Upload" });
+const videoDetail = (req, res) =>
+  res.render("videoDetail", { pageTitle: "details" });
+const editVideo = (req, res) =>
+  res.render("editVideo", { pageTitle: "Edit Video" });
+const deleteVideo = (req, res) =>
+  res.render("deleteVideo", { pageTitle: "Delete Video" });
 
 module.exports = {
   videoHome: videoHome,
   searchVideo: searchVideo,
-  videos: videos,
   uploadVideo: uploadVideo,
   videoDetail: videoDetail,
   editVideo: editVideo,
