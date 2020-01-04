@@ -7,7 +7,8 @@ const UsersControllers = require("../controllers/userController");
 
 const getJoin = UsersControllers.getJoin;
 const postJoin = UsersControllers.postJoin;
-const login = UsersControllers.login;
+const getLogin = UsersControllers.getLogin;
+const postLogin = UsersControllers.postLogin;
 const logout = UsersControllers.logout;
 const home = VideoControllers.videoHome;
 const search = VideoControllers.searchVideo;
@@ -18,7 +19,8 @@ globalRouter.post(routes.join, postJoin);
 
 globalRouter.get(routes.home, home);
 globalRouter.get(routes.search, search);
-globalRouter.get(routes.login, login);
+globalRouter.get(routes.login, getLogin);
+globalRouter.post(routes.login, postLogin);
 globalRouter.get(routes.logout, logout);
 // globalRouter.get(routes.videos, videos);
 

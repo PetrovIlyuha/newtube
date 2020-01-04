@@ -1,6 +1,6 @@
 export const videos = [
   {
-    id: 123123,
+    id: 12,
     title: "Mosh Hamedani",
     description: "Why I Quit",
     views: 124,
@@ -12,7 +12,7 @@ export const videos = [
     }
   },
   {
-    id: 237438,
+    id: 23,
     title: "Code Drip",
     description: "Data Structures in 7 min",
     views: 112323,
