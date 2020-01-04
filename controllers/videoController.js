@@ -7,9 +7,9 @@ const searchVideo = (req, res) => {
   const {
     query: { term: searchingBy }
   } = req;
-  console.log(searchingBy);
-  res.render("search", { pageTitle: "Search", searchingBy });
+  res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
+
 const uploadVideo = (req, res) => res.render("upload", { pageTitle: "Upload" });
 const videoDetail = (req, res) =>
   res.render("videoDetail", { pageTitle: "details" });

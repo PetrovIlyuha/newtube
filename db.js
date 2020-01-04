@@ -1,10 +1,10 @@
 export const videos = [
   {
     id: 123123,
-    title: "Rhianna",
-    description: "Good Song",
+    title: "Mosh Hamedani",
+    description: "Why I Quit",
     views: 124,
-    videoFile: 'https://archive.org/details/BigBuckBunny_124',
+    videoFile: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
     creator: {
       id: 3437,
       name: "Matthew",
@@ -13,10 +13,10 @@ export const videos = [
   },
   {
     id: 237438,
-    title: "Michael Jackson",
-    description: "Very nice tune",
+    title: "Code Drip",
+    description: "Data Structures in 7 min",
     views: 112323,
-    videoFile: 'https://archive.org/details/BigBuckBunny_124',
+    videoFile: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
     creator: {
       id: 3437,
       name: "Matthew",
