@@ -1,5 +1,8 @@
 import "./db";
 const app = require("./app");
+const dotenv = require("dotenv");
+dotenv.config();
+const Video = require("./models/Video");
 
 const PORT = process.env.PORT || 4000;
 
