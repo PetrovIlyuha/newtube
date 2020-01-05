@@ -17,10 +17,11 @@ const search = VideoControllers.searchVideo;
 globalRouter.get(routes.join, getJoin);
 globalRouter.post(routes.join, postJoin);
 
+globalRouter.post(routes.login, postLogin);
+globalRouter.get(routes.login, getLogin);
+
 globalRouter.get(routes.home, home);
 globalRouter.get(routes.search, search);
-globalRouter.get(routes.login, getLogin);
-globalRouter.post(routes.login, postLogin);
 globalRouter.get(routes.logout, logout);
 // globalRouter.get(routes.videos, videos);
 

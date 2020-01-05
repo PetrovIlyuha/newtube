@@ -1,25 +1,23 @@
-const routes = require('../routes');
+const routes = require("../routes");
 
 const getJoin = (req, res) => {
-  res.render("join", { pageTitle: "Join Us" })
+  res.render("join", { pageTitle: "Join Us" });
 };
 
 const postJoin = (req, res) => {
   const {
-    body: {
-      name, email, password, password2
-    }
+    body: { name, email, password, password2 }
   } = req;
   if (password !== password2) {
     res.status(400).json({
       message: "Passwords don't match"
-    })
+    });
   } else {
     //TODO: Register user
     //TODO: Log User In
     res.redirect(routes.home);
   }
-  res.render("join", { pageTitle: "Join Us" })
+  res.render("join", { pageTitle: "Join Us" });
 };
 
 const getLogin = (req, res) => res.render("Login", { pageTitle: "Log in" });

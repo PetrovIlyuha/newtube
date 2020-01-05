@@ -1,13 +1,15 @@
-const express = require("express");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const express = require("express");
+const helmet = require("helmet");
+const morgan = require("morgan");
 const userRouter = require("./routers/userRouter");
+
 const videoRouter = require("./routers/videoRouter");
 const globalRouter = require("./routers/globalRouter");
-const routes = require("./routes");
 const localMiddleware = require("./middlewares");
+
+const routes = require("./routes");
 const app = express();
 
 app.use(helmet());

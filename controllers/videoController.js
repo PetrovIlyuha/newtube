@@ -1,8 +1,7 @@
-import {videos} from "../db";
-const routes = require('../routes');
+const routes = require("../routes");
 
 const videoHome = (req, res) => {
-  res.render("home", { pageTitle: "Home", videos })
+  res.render("home", { pageTitle: "Home", videos });
 };
 const searchVideo = (req, res) => {
   const {
@@ -14,14 +13,10 @@ const searchVideo = (req, res) => {
 const getUpload = (req, res) => res.render("upload", { pageTitle: "Upload" });
 const postUpload = (req, res) => {
   const {
-    body: {
-      file,
-      title,
-      description
-    }
- } = req;
-  res.redirect(routes.videoDetail(12))
-//  TODO: upload and save video
+    body: { file, title, description }
+  } = req;
+  res.redirect(routes.videoDetail(12));
+  //  TODO: upload and save video
 };
 
 const videoDetail = (req, res) =>
